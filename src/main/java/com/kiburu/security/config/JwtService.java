@@ -5,7 +5,6 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +17,9 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    /** Generate 256-bit encryption key from https://www.allkeysgenerator.com/
+    /** Generate a 256-bit encryption key from https://www.allkeysgenerator.com/
      *  Check the Hex? checkbox
-     *  key used to encrypt and validate the digital signature
+     *  key used to encrypt and validate the digital signature in the token
      *  */
     private static final String SECRET_KEY = "614E645267556B58703273357538782F413F4428472B4B6250655368566D5971";
 
